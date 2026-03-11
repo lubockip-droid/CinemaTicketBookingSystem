@@ -28,3 +28,16 @@ Milen and Janesz: please fork the repo to your own GitHub account.
 ### 2. **Clone your fork**
 ```bash
 git clone <your-fork-url>
+```
+##  Part A : workflow initial tasks
+### 1. Creating the structure
+1.1 — Inside src, create three new folders:
+- models
+- services
+- utilities
+  
+1.2 — Inside models.kt create data models:
+* film, 
+* screening,
+* user
+* booking
