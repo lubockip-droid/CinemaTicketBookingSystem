@@ -30,7 +30,7 @@ Milen and Janesz: please fork the repo to your own GitHub account.
 git clone <your-fork-url>
 ```
 ##  Part A : workflow initial tasks
-### 1. Creating the structure
+### 1. Creating the models structure
 1.1 — Inside src, create three new folders:
 - models
 - services
@@ -78,3 +78,39 @@ and Screening(id = 10, filmId = 1, date = "2026-03-11", time = "18:00", screenNu
   val screeningId: Int,
   val numberOfTickets: Int
   )
+
+### 2. Creating the services skeleton structure
+
+Creating empty service classes that will later contain the logic for managing films, screenings, users, and bookings
+(FilmService, ScreeningService, UserService, BookingService).
+
+2.1 Inside services package, create four Kotlin Class/File entries:
+- FilmService
+- ScreeningService
+- UserService
+- BookingService ← my part (Piotr)
+
+* #### FilmService.kt
+package services
+class FilmService {
+// to do: Add film management logic here}
+
+* #### ScreeningService.kt
+package services
+class ScreeningService {
+// to do: Add screening management logic here}
+
+* #### UserService.kt
+package services
+class UserService {
+// to do: Add user management logic here}
+
+* #### BookingService.kt
+package services
+class BookingService {
+// to do: Add booking management logic here }
+
+### 3. Connecting the services to Main Menu
+(When the user chooses “Manage Films”, we call FilmService(), when the user chooses “Manage Bookings”, we call BookingService(), etc.
+=> this will be a navigation system)
+
