@@ -41,3 +41,40 @@ git clone <your-fork-url>
 * screening,
 * user
 * booking
+
+1.3 — Fill each data models with basic classes:
+
+* film:
+  data class Film(
+  val id: Int,
+  val title: String,
+  val genre: String,
+  val durationMinutes: Int
+  )
+data class Film with a unique ID, title, genre and duration
+
+* screening:data class Screening(
+  val id: Int,
+  val filmId: Int,
+  val date: String,
+  val time: String,
+  val screenNumber: Int
+  )
+  data class Screening with: film id, date, time and screenNumber
+Attention: there is id in film.kt but film id in screening.kt - A film doesn’t need to know which screenings exist.
+A Screening must know which film it belongs to (a one‑to‑many relationship One Film  →  Many Screenings
+) direction of the link is:Screening → Film eg: Film(id = 1, title = "Avatar", ...)
+and Screening(id = 10, filmId = 1, date = "2026-03-11", time = "18:00", screenNumber = 2) so filmId = 1 means: “This screening is showing the film with ID 1.” 
+ 
+* user:data class User(
+  val id: Int,
+  val name: String,
+  val email: String
+  ) data class User with unique user id, name and email.
+
+* booking: data class Booking(
+  val id: Int,
+  val userId: Int,
+  val screeningId: Int,
+  val numberOfTickets: Int
+  )

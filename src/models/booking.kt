@@ -1,4 +1,8 @@
 package models
 
-class booking {
-}
+data class Booking(
+    val id: Int,
+    val userId: Int,
+    val screeningId: Int,
+    val numberOfTickets: Int
+)

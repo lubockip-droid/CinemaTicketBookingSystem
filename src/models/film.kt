@@ -1,4 +1,8 @@
 package models
 
-class film {
-}
+data class Film(
+    val id: Int,
+    val title: String,
+    val genre: String,
+    val durationMinutes: Int
+)
